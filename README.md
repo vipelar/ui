@@ -7,7 +7,7 @@
 import '@vipelar/ui/styles.css';
 ```
 
-tsxで通常通りimprt
+tsxで通常通りimport
 ```tsx
 import { Heading, Text, Alert } from '@vipelar/ui';
 
@@ -45,6 +45,21 @@ pnpm install
 ```
 
 `ui`側のソースを変更したら`pnpm build`を再実行すれば反映される。
+
+### 注意: React二重ロード対策
+
+`link:`で試すときは、symlink経由で`ui/node_modules/react`が拾われてReactが二重ロードされる(`useContext`がnullになるエラーが出る)。呼び出し側の`vite.config.ts`に`dedupe`を追加すること:
+
+```ts
+export default defineConfig({
+  // ...
+  resolve: {
+    dedupe: ['react', 'react-dom', 'react-router-dom'],
+  },
+});
+```
+
+publish後の通常インストール(`pnpm add @vipelar/ui`)ではこの設定は不要。
 
 ## Components
 
