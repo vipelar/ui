@@ -6,13 +6,13 @@ export const Callout: React.FC<{
 }> = ({ tone = 'info', children }) => {
   const toneClass =
     tone === 'warn'
-      ? 'border-bdwarn bg-bgwarn text-txwarn'
+      ? 'border-danger bg-danger-bg text-danger-text'
       : tone === 'caution'
-        ? 'border-bdcaution bg-bgcaution text-txcaution'
-        : 'border-bdinfo bg-bginfo text-txinfo';
+        ? 'border-warning bg-warning-bg text-warning-text'
+        : 'border-info bg-info-bg text-info-text';
 
   return (
-    <div className={`rounded-md border px-4 py-3 text-sm leading-relaxed ${toneClass}`}>
+    <div className={`rounded-card border px-4 py-3 text-sm leading-relaxed ${toneClass}`}>
       {children}
     </div>
   );
