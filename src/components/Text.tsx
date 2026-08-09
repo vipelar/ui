@@ -15,31 +15,27 @@ export default function Text({
   className = '',
   bold = false,
 }: TextProperty) {
-  // 文字サイズ
   const textSize =
     size === 'sm'
-      ? 'text-sm'
+      ? 'text-caption'
       : size === 'xl'
-        ? 'text-3xl'
+        ? 'text-h2'
         : size === 'lg'
-          ? 'text-xl'
-          : 'text-base';
+          ? 'text-h4'
+          : 'text-body';
 
-  // 文字色
   const textColor =
     color === 'gray'
-      ? 'text-gray-700'
+      ? 'text-neutral-600 dark:text-neutral-400'
       : color === 'blue'
-        ? 'text-blue-500'
+        ? 'text-info'
         : color === 'red'
-          ? 'text-red-500'
+          ? 'text-danger'
           : color === 'fade'
-            ? 'text-fgfade'
-            : color === 'base'
-              ? 'text-foreground'
-              : color === 'yellow'
-                ? 'text-yellow-400'
-                : 'text-foreground';
+            ? 'text-neutral-500 dark:text-neutral-400'
+            : color === 'yellow'
+              ? 'text-warning'
+              : 'text-neutral-900 dark:text-neutral-50';
   const boldClass = bold ? 'font-bold' : '';
 
   return <p className={`${textSize} ${textColor} ${boldClass} ${className}`}>{children}</p>;

@@ -1,0 +1,77 @@
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-primary: #7a79d7;
+  --color-primary-50: #f7f9ff;
+  --color-primary-100: #edefff;
+  --color-primary-200: #d5d9ff;
+  --color-primary-300: #b8bbff;
+  --color-primary-400: #9899f5;
+  --color-primary-500: #7a79d7;
+  --color-primary-600: #5f5cb2;
+  --color-primary-700: #454388;
+  --color-primary-800: #2d2a5f;
+  --color-primary-900: #171537;
+  --color-primary-950: #09071f;
+
+  --color-neutral-50: #f9fafb;
+  --color-neutral-100: #eff2f4;
+  --color-neutral-200: #dadfe3;
+  --color-neutral-300: #bec5cb;
+  --color-neutral-400: #9da6ac;
+  --color-neutral-500: #7f878e;
+  --color-neutral-600: #626a70;
+  --color-neutral-700: #484e53;
+  --color-neutral-800: #2f3437;
+  --color-neutral-900: #181b1d;
+  --color-neutral-950: #090b0d;
+
+  --color-success: #46944b;
+  --color-warning: #d09a30;
+  --color-danger: #c35c57;
+  --color-info: #1289c7;
+
+  --color-success-bg: #e3efe4;
+  --color-warning-bg: #f8f0e0;
+  --color-danger-bg: #f6e7e6;
+  --color-info-bg: #dbedf7;
+
+  --color-success-text: #2b6630;
+  --color-warning-text: #8a6413;
+  --color-danger-text: #93342f;
+  --color-info-text: #0d5f8b;
+
+  --color-vipelar: #d396ed;
+
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+
+  --text-h1: 1.802rem;
+  --text-h1--line-height: 1.3;
+  --text-h2: 1.6018rem;
+  --text-h2--line-height: 1.3;
+  --text-h3: 1.4238rem;
+  --text-h3--line-height: 1.3;
+  --text-h4: 1.2656rem;
+  --text-h4--line-height: 1.3;
+  --text-body: 1rem;
+  --text-body--line-height: 1.63;
+  --text-caption: 0.8889rem;
+  --text-caption--line-height: 1.63;
+
+  --radius-none: 0;
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 6px;
+  --radius-xl: 8px;
+  --radius-full: 9999px;
+
+  --radius-input: var(--radius-sm);
+  --radius-button: var(--radius-md);
+  --radius-card: var(--radius-lg);
+  --radius-badge: var(--radius-full);
+
+  --shadow-sm: 0 1px 2px 0 oklch(0% 0 0 / 0.06);
+  --shadow-md: 0 4px 6px -1px oklch(0% 0 0 / 0.08), 0 2px 4px -2px oklch(0% 0 0 / 0.08);
+  --shadow-lg: 0 10px 15px -3px oklch(0% 0 0 / 0.1), 0 4px 6px -4px oklch(0% 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px oklch(0% 0 0 / 0.12), 0 8px 10px -6px oklch(0% 0 0 / 0.12);
+}

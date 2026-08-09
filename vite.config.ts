@@ -13,7 +13,7 @@ export default defineConfig({
       cssFileName: 'styles',
     },
     rollupOptions: {
-      external: ['react', 'react-dom', 'react/jsx-runtime', 'react-router-dom', 'lucide-react'],
+      external: ['react', 'react-dom', 'react/jsx-runtime', 'lucide-react'],
     },
     sourcemap: true,
   },
