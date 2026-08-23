@@ -32,7 +32,7 @@ jobs:
         id: app-token
         uses: actions/create-github-app-token@v3.2.0
         with:
-          app-id: ${{ secrets.RENOVATE_APP_ID }}
+          client-id: ${{ secrets.RENOVATE_CLIENT_ID }}
           private-key: ${{ secrets.RENOVATE_APP_PRIVATE_KEY }}
 
       - name: Checkout
@@ -53,5 +53,3 @@ jobs:
           RENOVATE_ONBOARDING: 'false'
           RENOVATE_REQUIRE_CONFIG: 'required'
           RENOVATE_DRY_RUN: ${{ inputs.dryRun }}
-          RENOVATE_HOST_RULES: >-
-            [{"matchHost":"npm.pkg.github.com","hostType":"npm","token":"${{ secrets.VIPELAR_PACKAGES_TOKEN }}"}]
