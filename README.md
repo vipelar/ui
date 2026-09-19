@@ -171,6 +171,7 @@ publish後の通常インストール(`pnpm add @vipelar/ui`)ではこの設定�
 - `Space`
 - `Skeleton`
 - `NumberedSteps`
+- `Field`
 - `CodeBlock`
 - `PropsTable`
 - `Callout`
